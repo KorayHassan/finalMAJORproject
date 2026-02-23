@@ -1068,11 +1068,11 @@ MonoBehaviour:
   - {fileID: 528405166}
   - {fileID: 95688875}
   - {fileID: 1242326567}
-  songDelayInSeconds: 0
-  marginOfError: 0.52
-  inputDelayInMilliseconds: 0
+  songDelayInSeconds: 1.08
+  marginOfError: 2
+  inputDelayInMilliseconds: 1
   fileLocation: Blues_Shuffle_Good.mid
-  noteTime: 1
+  noteTime: 2
   noteSpawnY: 7
   noteTapY: -3
 --- !u!4 &1787680573
