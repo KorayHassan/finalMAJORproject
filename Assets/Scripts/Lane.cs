@@ -69,7 +69,7 @@ public class Lane : MonoBehaviour
             SongManager.GetAudioSourceTime() -
             (SongManager.Instance.inputDelayInMilliseconds / 1000.0);
 
-        // ✅ Strum detection
+        //Strum detection
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Only hit if fret is being HELD
