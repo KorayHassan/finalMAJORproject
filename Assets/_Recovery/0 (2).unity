@@ -890,16 +890,8 @@ PrefabInstance:
       value: SongManager
       objectReference: {fileID: 0}
     - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
-      propertyPath: noteTapY
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: noteTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
-      propertyPath: noteSpawnY
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: audioSource
@@ -911,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: marginOfError
-      value: 0.07
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: lanes.Array.size
@@ -919,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: songDelayInSeconds
-      value: 0
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: 'lanes.Array.data[0]'
@@ -956,10 +948,6 @@ PrefabInstance:
     - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: 'lanes.Array.data[8]'
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6631083003710242573, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
-      propertyPath: inputDelayInMilliseconds
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8106242764561184887, guid: 1173dc4721d58f1498bd0aaf9d600bfb, type: 3}
       propertyPath: m_LocalPosition.x
