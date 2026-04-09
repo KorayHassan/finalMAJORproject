@@ -7,6 +7,11 @@ using System.IO;
 using UnityEngine.Networking;
 using System;
 
+public struct SongCharacters
+{
+    public float beatsPerMinute;
+}
+
 public class SongManager : MonoBehaviour
 {
     public static SongManager Instance;
@@ -17,7 +22,7 @@ public class SongManager : MonoBehaviour
 
     public int inputDelayInMilliseconds;
     
-
+    
     public string fileLocation = "Shuffle_In_E";
     public float noteTime;
     public float noteSpawnY;

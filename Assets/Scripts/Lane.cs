@@ -56,7 +56,7 @@ public class Lane : MonoBehaviour
         if (spawnIndex >= timeStamps.Count) return;
         if (notePrefab == null)
         {
-            Debug.LogError("Note Prefab is not assigned in Lane!");
+           //Debug.LogError("Note Prefab is not assigned in Lane!");
             return;
         }
 
