@@ -370,7 +370,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!224 &112365630 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2530564255289387840, guid: 58c529773af203b4a98a1447aaeef2df, type: 3}
@@ -764,7 +763,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &214921336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,7 +1305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1596,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &484599690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1689,7 +1685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &553984893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,7 +2400,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &781451121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2570,8 +2564,8 @@ MonoBehaviour:
   marginOfError: 0.07
   inputDelayInMilliseconds: 0
   fileLocation: Shuffle_In_E.mid
-  noteTime: 1
-  noteSpawnY: 7
+  noteTime: 4.28
+  noteSpawnY: 70.64
   noteTapY: -3
 --- !u!1 &856346987
 GameObject:
@@ -2932,7 +2926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &1008540124
 GameObject:
   m_ObjectHideFlags: 0
@@ -3396,7 +3389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &1335942847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,7 +3530,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Note
   assignedTime: 0
-  judgementLine: {fileID: 112365630}
 --- !u!1 &1735784501
 GameObject:
   m_ObjectHideFlags: 0
