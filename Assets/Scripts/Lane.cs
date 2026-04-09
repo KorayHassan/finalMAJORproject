@@ -6,7 +6,7 @@ using UnityEngine;
 public class Lane : MonoBehaviour
 {
     public Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
-    public KeyCode input; // Numpad key for this lane
+    public KeyCode input;
     public GameObject notePrefab;
 
     private List<Note> notes = new List<Note>();
@@ -15,8 +15,12 @@ public class Lane : MonoBehaviour
     private int spawnIndex = 0;
     private int inputIndex = 0;
 
+    private bool isInitialized = false;
+
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
+        timeStamps.Clear();
+
         foreach (var note in array)
         {
             if (note.NoteName == noteRestriction)
@@ -34,10 +38,15 @@ public class Lane : MonoBehaviour
                 timeStamps.Add(time);
             }
         }
+
+        isInitialized = true;
     }
 
     void Update()
     {
+        if (!isInitialized) return;
+        if (SongManager.Instance == null) return;
+
         SpawnNotes();
         HandleInput();
     }
@@ -45,12 +54,24 @@ public class Lane : MonoBehaviour
     void SpawnNotes()
     {
         if (spawnIndex >= timeStamps.Count) return;
+        if (notePrefab == null)
+        {
+            Debug.LogError("Note Prefab is not assigned in Lane!");
+            return;
+        }
 
-        if (SongManager.GetAudioSourceTime() >= 
-            timeStamps[spawnIndex] - SongManager.Instance.noteTime)
+        double songTime = SongManager.GetAudioSourceTime();
+
+        if (songTime >= timeStamps[spawnIndex] - SongManager.Instance.noteTime)
         {
             var spawned = Instantiate(notePrefab, transform);
+
             Note noteComponent = spawned.GetComponent<Note>();
+            if (noteComponent == null)
+            {
+                Debug.LogError("Note prefab is missing Note script!");
+                return;
+            }
 
             noteComponent.assignedTime = (float)timeStamps[spawnIndex];
 
@@ -62,37 +83,39 @@ public class Lane : MonoBehaviour
     void HandleInput()
     {
         if (inputIndex >= timeStamps.Count) return;
+        if (SongManager.Instance == null) return;
 
         double timeStamp = timeStamps[inputIndex];
         double marginOfError = SongManager.Instance.marginOfError;
+
         double audioTime =
             SongManager.GetAudioSourceTime() -
             (SongManager.Instance.inputDelayInMilliseconds / 1000.0);
 
-        //Strum detection
+        // Strum detection
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Only hit if fret is being HELD
             if (Input.GetKey(input))
             {
                 if (Math.Abs(audioTime - timeStamp) < marginOfError)
                 {
                     Hit();
 
-                    if (inputIndex < notes.Count)
+                    if (inputIndex < notes.Count && notes[inputIndex] != null)
+                    {
                         Destroy(notes[inputIndex].gameObject);
+                    }
 
                     inputIndex++;
                 }
                 else
                 {
-                    // Strummed at wrong time
                     Miss();
                 }
             }
         }
 
-        // Passive miss (note passed completely)
+        // Passive miss
         if (audioTime > timeStamp + marginOfError)
         {
             Miss();

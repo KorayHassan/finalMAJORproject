@@ -18,7 +18,7 @@ public class SongManager : MonoBehaviour
     public int inputDelayInMilliseconds;
     
 
-    public string fileLocation;
+    public string fileLocation = "Shuffle_In_E";
     public float noteTime;
     public float noteSpawnY;
     public float noteTapY;
@@ -69,7 +69,10 @@ public class SongManager : MonoBehaviour
 
     private void ReadFromFile()
     {
-        midiFile = MidiFile.Read(Application.streamingAssetsPath + "/" + fileLocation);
+        string path = Path.Combine(Application.streamingAssetsPath, fileLocation);
+        Debug.Log("Loading MIDI from: " + path);
+
+        midiFile = MidiFile.Read(path);
         GetDataFromMidi();
     }
     public void GetDataFromMidi()
